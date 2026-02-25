@@ -2,9 +2,8 @@
 /* Typing Effect */
 
 const roles = [
+    "Python",
     "Backend Developer",
-    "Django Specialist",
-    "API Engineer",
     "Problem Solver",
 ];
 
@@ -51,7 +50,7 @@ const reveals = document.querySelectorAll(".reveal");
 
 function revealOnScroll() {
     reveals.forEach((el) => {
-        const top = el.getBoundingClientRect().top;
+        const {top} = el.getBoundingClientRect();
         const win = window.innerHeight;
 
         if (top < win - 120) {
@@ -79,7 +78,7 @@ const contactObserver = new IntersectionObserver(
                 const index = [...contactItems].indexOf(entry.target);
 
                 const baseDelay = 400; // first delay
-                const stagger = 230;   // slower stagger
+                const stagger = 200;   // slower stagger
 
                 setTimeout(() => {
                     entry.target.classList.add("show");
