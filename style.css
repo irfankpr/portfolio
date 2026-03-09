@@ -431,7 +431,11 @@ body {
 
 
 .signature{
-    padding: 0;
-    margin: 0;
-    width: 15rem;
+    width: 10rem;
+}
+
+@media (max-width: 768px) {
+    .signature{
+    width: 8rem;
+}
 }
