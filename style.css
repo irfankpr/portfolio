@@ -428,3 +428,10 @@ body {
         transform: translateY(0);
     }
 }
+
+
+.signature{
+    padding: 0;
+    margin: 0;
+    width: 15rem;
+}
