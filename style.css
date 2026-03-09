@@ -90,6 +90,13 @@ body::before {
         0 0 30px rgba(56, 189, 248, 0.3),
         inset 0 0 25px rgba(56, 189, 248, 0.1);
 }
+.code pre {
+    white-space: pre; 
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-left: 2rem;
+    text-indent: -1rem;
+}
 
 
 /* ================= WINDOW CONTROLS ================= */
@@ -211,6 +218,7 @@ body::before {
 
 .triangle-row {
     display: flex;
+    justify-content: center;
     gap: 24px;
 }
 
@@ -225,47 +233,27 @@ body::before {
     margin: 0 auto 10px;
 }
 
-/* ================= MOBILE FIX ================= */
 
-@media screen and (max-width: 768px) {
+/* ================= TECH MOBILE ================= */
 
-    .triangle {
-        display: grid !important;
+@media (max-width: 768px) {
 
-        /* Fixed-width columns (IMPORTANT) */
-        grid-template-columns: repeat(3, 95px) !important;
-
-        gap: 16px;
-
-        justify-content: center !important;
-        justify-items: center !important;
-
-        width: 100%;
-        max-width: 340px;
-
-        margin: 0 auto !important;
-    }
-
-    /* Remove rows */
     .triangle-row {
-        display: contents !important;
+        flex-wrap: wrap;   /* prevents overflow */
+        gap: 16px;
     }
 
     .tech-card {
         width: 95px;
-        font-size: 11px;
-        padding: 12px 8px;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+        padding: 12px;
+        font-size: 12px;
     }
 
     .tech-card img {
-        width: 30px;
+        width: 28px;
         margin-bottom: 6px;
     }
+
 }
 
 
